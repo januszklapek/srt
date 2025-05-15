@@ -1,0 +1,14 @@
+@import "./reset";
+@import "./star";
+@import "./variables";
+@import "./mixins";
+@import "./body";
+// ----------------------------------
+@import "./components/header";
+
+@import "./components/footer";
+// ----------------------------------
+@import "./components/home";
+@import "./components/_characters.scss";
+@import "./components/locations";
+@import "./components/episodes";

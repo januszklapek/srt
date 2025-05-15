@@ -1,0 +1,21 @@
+#glowny-characters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em;
+    gap: 2em;
+}
+
+.characters{
+    width: 30%;
+    font-family: $font-1;
+    text-align: center;
+    box-shadow: 0 0px 8px 0 rgba(255, 255, 255, 0.446), 0 0px 20px 0 rgba(255, 255, 255, 0.446);
+
+    img{
+        transition: $medium-transition;
+        &:hover{
+            scale: 1.1;
+        }
+    }
+}
