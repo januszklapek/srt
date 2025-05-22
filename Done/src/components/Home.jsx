@@ -1,7 +1,12 @@
 import React from "react";
 
-function Home() {
-  return <h1 id="glowna">Strona główna</h1>;
+
+function HomePage() {
+  return (
+    <div className="starwars-home">
+      <h1 className="glow-title">STAR WARS API</h1>
+    </div>
+  );
 }
 
-export default Home;
+export default HomePage;

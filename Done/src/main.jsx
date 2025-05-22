@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./scss/main.css";
 import Characters from "./components/Characters";
 import Locations from "./components/Locations";
-import Episodes from "./components/Episodes";
+import Episodes from "./components/StarWarsGame";
 import Home from "./components/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";

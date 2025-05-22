@@ -1,0 +1,66 @@
+.game-container {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at bottom, #0b0c10 0%, #000000 100%);
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  font-family: 'Orbitron', sans-serif;
+  color: #ffe81f;
+  padding: 50px;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .loading {
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+
+  .card {
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid white;
+    box-shadow: 0 0 20px white;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 400px;
+    margin: auto;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .question {
+      font-size: 1.3rem;
+      margin: 15px 0;
+    }
+
+    .answer {
+      margin-top: 20px;
+
+      p {
+        margin: 6px 0;
+      }
+
+      button {
+        margin-top: 15px;
+      }
+    }
+
+    button {
+      background-color: #ffe81f;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
+}

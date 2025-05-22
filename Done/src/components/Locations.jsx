@@ -1,31 +1,30 @@
-import React, { useState, useEffect } from "react";
-import Location from "./Location";
+import React, { useEffect, useState } from "react";
+
 
 function Locations() {
-  function addLocation({ id, name, dimension, type, image }) {
-    return (
-      <Location
-        key={id}
-        id={id}
-        name={name}
-        dimension={dimension}
-        type={type}
-        image={image}
-      />
-    );
-  }
-  const [locations, setLocations] = useState([]);
+  const [planets, setPlanets] = useState([]);
 
   useEffect(() => {
-    fetch("https://rickandmortyapi.com/api/location")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setLocations(data.results); // <---------
-      });
-  }, []); // Pusty array dependency powoduje, że fetch zostanie wykonany tylko raz po zamontowaniu komponentu
-  return <div id="glowny-locations">{locations.map((location) => addLocation(location))}</div>;
+    fetch("https://www.swapi.tech/api/planets")
+      .then((res) => res.json())
+      .then((data) => setPlanets(data.results))
+      .catch((err) => console.error(err));
+  }, []);
+
+  return (
+    <div className="locations-page">
+      <div className="location-grid">
+        {planets.map((planet, index) => (
+          <div className="location-card" key={index}>
+            <div className="location-content">
+              <h3>{planet.name}</h3>
+              <p><strong>UID:</strong> {planet.uid}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Locations;

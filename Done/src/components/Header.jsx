@@ -13,10 +13,10 @@ function Header() {
             <Link to="/characters">Characters</Link>
           </li>
           <li>
-            <Link to="/locations">Locations</Link>
+            <Link to="/locations">Planets</Link>
           </li>
           <li>
-            <Link to="/episodes">Episodes</Link>
+            <Link to="/episodes">Game</Link>
           </li>
         </ul>
       </nav>

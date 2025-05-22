@@ -1,7 +1,39 @@
-#glowna{
-    font-size: 5em;
-    font-family: $font-1;
-    justify-self: center;
-    padding-top: 1.5em;
-    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.655);
+// HomePage.scss
+
+.starwars-home {
+  min-height: 76.5vh;
+  background: radial-gradient(ellipse at bottom, #0b0c10 0%, #000000 100%);
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.glow-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 5rem;
+  color: white;
+  text-shadow:
+    0 0 10px #ffe81f,
+    0 0 20px #ffe81f,
+    0 0 30px #ffe81f,
+    0 0 40px #ffe81f;
+  letter-spacing: 5px;
+  animation: glowPulse 3s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow:
+      0 0 10px #ffe81f,
+      0 0 20px #ffe81f,
+      0 0 30px #ffe81f;
+  }
+  to {
+    text-shadow:
+      0 0 20px #ffe81f,
+      0 0 40px #ffe81f,
+      0 0 60px #ffe81f;
+  }
 }
